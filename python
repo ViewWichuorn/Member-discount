@@ -1,0 +1,16 @@
+unit = int(input("Enter unit: "))
+price = float(input("Enter price: "))
+member = str(input("Are you member? (yes/no): "))
+total = unit*price
+if member == "yes":
+  if total <= 500:
+    discount = total*0.1
+  elif total > 500 and total < 1000:
+    discount = total*0.15
+  elif total >= 1000:
+    discount = total*0.2
+elif member == "no":
+    discount = 0
+print("Total is %.2f baht" % total)
+print("Discount is %.2f baht" % discount)
+print("Pay %.2f baht" % (total-discount))
